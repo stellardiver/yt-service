@@ -1,0 +1,31 @@
+package com.example.models.browse
+
+data class Client (
+    var hl: String = "en",
+    var gl: String = "TH",
+    var remoteHost: String = "49.229.182.185",
+    var deviceMake: String = "",
+    var deviceModel: String = "",
+    var visitorData: String = "CgtjdkxycFk5bjlaWSjIzparBjIICgJUSBICGgA%3D",
+    var userAgent: String = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:120.0) Gecko/20100101 Firefox/120.0,gzip(gfe)",
+    var clientName: String = "WEB",
+    var clientVersion: String = "2.20231121.08.00",
+    var osName: String = "X11",
+    var osVersion: String = "",
+    var originalUrl: String = "",
+    var platform: String = "DESKTOP",
+    var clientFormFactor: String = "UNKNOWN_FORM_FACTOR",
+    var configInfo: ConfigInfo = ConfigInfo(),
+    var userInterfaceTheme: String = "USER_INTERFACE_THEME_DARK",
+    var timeZone: String = "Asia/Bangkok",
+    var browserName: String = "Firefox",
+    var browserVersion: String = "120.0",
+    var acceptHeader: String = "text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8",
+    var deviceExperimentId: String = "",
+    var screenWidthPoints: Int = 822,
+    var screenHeightPoints: Int = 914,
+    var screenPixelDensity: Int = 1,
+    var screenDensityFloat: Int = 1,
+    var utcOffsetMinutes: Int = 180,
+    var mainAppWebInfo: MainAppWebInfo = MainAppWebInfo()
+)

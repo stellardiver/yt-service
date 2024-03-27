@@ -1,0 +1,20 @@
+CREATE TABLE IF NOT EXISTS yt_users (
+    id INTEGER NOT NULL PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    email VARCHAR(128) UNIQUE NOT NULL,
+    password VARCHAR(128) NOT NULL,
+    recovery_email VARCHAR(128) NOT NULL,
+    sid_cookie VARCHAR(128) NOT NULL,
+    hsid_cookie VARCHAR(128) NOT NULL,
+    ssid_cookie VARCHAR(128) NOT NULL,
+    apisid_cookie VARCHAR(128) NOT NULL,
+    sapisid_cookie VARCHAR(128) NOT NULL,
+    session_token VARCHAR(256) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS service_users (
+    id INTEGER NOT NULL PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    login VARCHAR(128) UNIQUE NOT NULL,
+    password VARCHAR(128) NOT NULL
+);
+
+ALTER TABLE yt_users ADD secure1psid_cookie VARCHAR(256) DEFAULT '' NOT NULL;

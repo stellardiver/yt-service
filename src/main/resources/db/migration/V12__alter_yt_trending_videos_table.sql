@@ -1,0 +1,1 @@
+ALTER TABLE yt_trending_videos ADD first_appeared BIGINT DEFAULT 0 NOT NULL;

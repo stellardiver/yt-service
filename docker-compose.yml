@@ -1,0 +1,30 @@
+services:
+  db:
+    image: postgres
+    platform: linux/amd64
+    restart: always
+    container_name: backend-db
+    volumes:
+      - pg-volume:/var/lib/postgresql/data
+    env_file:
+      - .env
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U $$POSTGRES_USER -d $$POSTGRES_DB" ]
+      interval: 5s
+#  ktor:
+#    build: .
+#    platform: linux/amd64
+#    container_name: backend-ktor
+#    restart: always
+#    ports:
+#      - "8080:8080"
+#    env_file:
+#      - .env
+#    depends_on:
+#      db:
+#        condition: service_healthy
+
+volumes:
+  pg-volume: {}

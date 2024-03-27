@@ -1,0 +1,1 @@
+ALTER TABLE yt_users ADD secure3psid_cookie VARCHAR(256) DEFAULT '' NOT NULL;

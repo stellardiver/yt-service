@@ -1,0 +1,8 @@
+CREATE TABLE IF NOT EXISTS market_gmail_account_products (
+    id INTEGER NOT NULL PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
+    product_id INTEGER UNIQUE NOT NULL,
+    title VARCHAR(1028) NOT NULL,
+    link VARCHAR(1028) NOT NULL,
+    cost FLOAT NOT NULL,
+    quantity INTEGER NOT NULL
+);
